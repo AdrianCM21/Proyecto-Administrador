@@ -1,0 +1,51 @@
+/* -----------------------------------Cobros------------------------------------------------------------------- */
+.busqueda{
+    width: 10vw;
+}
+.card-new{
+    height: 65vh;
+}
+/* boton de compra */
+.detalles{
+    display: grid;
+    min-width: 500px;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+.detalles table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.detalles table thead{
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0, 0, 0);
+}
+.detalles table  tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.detalles table  tr td:last-child{
+    text-align: end;
+}
+.detalles table tfoot{
+    background: #0f5e92;
+}
+.detalles table tfoot td{
+    color: #fff;
+}
+.detalles table  tr:last-child{
+    border-bottom:none;
+}
+
+.detalles table tbody tr:hover{
+    background: #0f5e92;
+    color: #fff;
+}
+
+.detalles table  tr td{
+    padding: 10px;
+}
