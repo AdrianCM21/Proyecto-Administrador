@@ -9,5 +9,6 @@ module.exports = (app)=>{
     app.get("/api/producto",Autentificacion.autentificacion,ControlProducto.mostrarProductos);
     app.post("/api/producto",Autentificacion.autentificacion,ControlProducto.createProducto);
     app.put('/api/producto/:id',Autentificacion.autentificacion,ControlProducto.actualizarProductos)
+    app.put('/api/reponer/:id',Autentificacion.autentificacion,ControlProducto.reponerProductos)
 }
 

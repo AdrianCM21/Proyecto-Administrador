@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, {  useEffect, useState } from 'react'
 import { Outlet} from 'react-router-dom'
+import {UseFechas,UseVendidos,UseDias} from '../hooks/UseFechas'
 import Menu from './Menu'
 
 const Layout = () => {
@@ -9,6 +10,9 @@ const Layout = () => {
   const [data, setData] = useState("");
   const [lista, setLista] = useState([])
   const [unidadesVenta,setUnidadesVenta]=useState([]);
+  const [datoFecha, setDatoFecha] = useState([]);
+  const [vendido, setVendido] = useState([])
+  const [dias, setDias] = useState([])
 
   useEffect(() => {
     const GetData=async()=>{
@@ -18,6 +22,9 @@ const Layout = () => {
             setData("");
             setLista([]);
             setUnidadesVenta([]);
+            setDatoFecha( UseFechas(((respuesta.data[0].productos)).map(e=>e.ventas)));
+            setDias( UseDias(((respuesta.data[0].productos)).map(e=>e.ventas)));
+            setVendido( UseVendidos(((respuesta.data[0].productos))))
         } catch (error){
           console.log(error)
       }
@@ -29,7 +36,7 @@ const Layout = () => {
       <div className="container mw-100">
           <Menu productos={productos} setProductos={setProductos}/>
           <div className='container'>
-              <Outlet context={{unidadesVenta,setUnidadesVenta,lista, setLista,data, setData,productos,setProductos,activador, setActivador}} />
+              <Outlet context={{dias,vendido,datoFecha,unidadesVenta,setUnidadesVenta,lista, setLista,data, setData,productos,setProductos,activador, setActivador}} />
           </div>
 
       </div>

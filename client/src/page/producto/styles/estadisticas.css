@@ -1,0 +1,10 @@
+.containerEstadistica{
+    display: flex;
+    width: 96.5vw;
+    height: 100vh;
+    margin: 0px 0px 0px -7.6vw;
+}
+.containerEstadistica .btn{
+    font-weight: 600;
+    margin: 1em 0px;
+}

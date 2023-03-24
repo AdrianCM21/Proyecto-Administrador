@@ -88,10 +88,17 @@
 
 .status{
     padding: 2px 4px;
-    background-color: #0f5e92;
+    background-color: #31fa74;
     border-radius: 4px;
     font-size: 1.3em;
     font-weight: 500;
+}
+
+.C3{
+    background-color: #e9e512;
+}
+.C2{
+    background-color: #e00909;
 }
 /* +++++++++++++++++++++++++++++++++Agregacion++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -108,4 +115,9 @@
 
 .last{
     margin-bottom: 5px;
+}
+/* ---------------------------------Reponer un producto---------------------------- */
+table .btn:hover{
+    background: #fff;
+    color: #000;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom';
+import Reponer from './Reponer';
 
 
 const Almacen = () => {
@@ -14,9 +15,10 @@ const Almacen = () => {
                 <thead>
                     <tr>
                         <td>Nombre del producto</td>
-                        <td>Unidades disponibles</td>
+                        <td>Unidades (D)</td>
                         <td>Stock critico</td>
                         <td>Precio de venta</td>
+                        <td>Agregar Productos</td>
                         <td>Estado</td>
 
                     </tr>
@@ -30,7 +32,8 @@ const Almacen = () => {
                                     <td>{productos.unidades}</td>
                                     <td>{productos.stockCritico}</td>
                                     <td>{productos.precioV} gs</td>
-                                    <td><span className='status'>Correcto</span></td>
+                                    <td><Reponer id={productos.id} unidadesA={productos.unidades}/></td>
+                                    <td>{productos.stockCritico < (productos.unidades)?<span className='status C1'>Correcto</span>: (productos.unidades===0?<span className='status C2'>Agotado</span>:<span className='status C3'>Critico</span>)}</td>
                                 </tr>
                             )
                         })

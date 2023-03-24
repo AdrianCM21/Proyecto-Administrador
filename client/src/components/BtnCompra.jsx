@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 const BtnCompra = ({id,cantVenta,setActivador}) => {
   const envio=(id,cantVenta,setActivador)=>{
     if(UseAxios(id,cantVenta)){
-      setActivador(id)
+      setActivador([id])
     }else{
         console.log('Fraso')
     }

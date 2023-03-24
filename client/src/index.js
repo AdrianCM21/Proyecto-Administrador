@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import './index.css';
-import 'bootstrap-icons/font/bootstrap-icons.json';
 import routes from './routes/Routes';
 
 

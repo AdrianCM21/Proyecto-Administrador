@@ -3,7 +3,6 @@ import Layout from "../layout/Layout";
 import Cobros from "../page/producto/Cobros";
 import Estadisticas from "../page/producto/Estadisticas";
 import Inventario from "../page/producto/Inventario";
-import PantallaPrincipal from "../page/producto/PantallaPrincipal";
 import Login from "../page/register/Login";
 import Register from "../page/register/Register";
 
@@ -14,7 +13,7 @@ export default createBrowserRouter([{
     children:[
         {
             index:true,
-            element:<PantallaPrincipal/>
+            element:<Estadisticas/>
         },{
             path:'/cobros',
             element:<Cobros/>
