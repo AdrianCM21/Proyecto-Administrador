@@ -4,10 +4,10 @@ import UseAxios from '../hooks/useAxiosCompra'
 import Swal from 'sweetalert2';
 // import {  useNavigate } from 'react-router-dom';
 
-const BtnCompra = ({id,cantVenta,setActivador}) => {
+const BtnCompra = ({id,cantVenta,setActivador,activador}) => {
   const envio=(id,cantVenta,setActivador)=>{
     if(UseAxios(id,cantVenta)){
-      setActivador([id])
+      setActivador(activador?0:1)
     }else{
         console.log('Fraso')
     }
@@ -23,7 +23,6 @@ const BtnCompra = ({id,cantVenta,setActivador}) => {
         confirmButtonText: 'Finalizar Compra'
     }).then((result) => {
         if (result.isConfirmed) {
-          console.log(id,cantVenta)
             envio(id,cantVenta,setActivador)
         }
     })

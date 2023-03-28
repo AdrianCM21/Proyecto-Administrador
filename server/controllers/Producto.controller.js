@@ -5,7 +5,6 @@ const {User} = require('../models/User.models');
 module.exports.createProducto = async (req, res) => {
     try{
     const { titulo,precioC,precioV,unidades,description,tipo,stockCritico} = req.body;
-    console.log( titulo,precioC,precioV,unidades,description,tipo,stockCritico,req.usuarios._id)
     const user = await User.find({_id:req.usuarios._id})
     const producto = await Productos.create({
         titulo,

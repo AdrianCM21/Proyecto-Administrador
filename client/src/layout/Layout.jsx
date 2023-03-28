@@ -6,7 +6,7 @@ import Menu from './Menu'
 
 const Layout = () => {
   const [productos, setProductos] = useState([]);
-  const [activador, setActivador] = useState([]);
+  const [activador, setActivador] = useState(0);
   const [data, setData] = useState("");
   const [lista, setLista] = useState([])
   const [unidadesVenta,setUnidadesVenta]=useState([]);

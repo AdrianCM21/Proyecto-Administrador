@@ -6,7 +6,7 @@ import './styles/productos.css';
 
 
 const Cobros = () => {
-    const {unidadesVenta,setUnidadesVenta,lista, setLista,data, setData,productos,setActivador} = useOutletContext();
+    const {unidadesVenta,setUnidadesVenta,lista, setLista,data, setData,productos,setActivador,activador} = useOutletContext();
 
 
     const control=()=>{//Esta funcion se encarga de inicializar los contadores de venta de cada elemento de la lista
@@ -82,7 +82,7 @@ const Cobros = () => {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><BtnCompra setActivador={setActivador} id={lista.map(e=>e.id)} cantVenta={unidadesVenta.map((e,idx)=>({'unidades':(lista[idx].unidades)-e}))}/></td>
+                    <td><BtnCompra setActivador={setActivador} activador={activador} id={lista.map(e=>e.id)} cantVenta={unidadesVenta.map((e,idx)=>({'unidades':(lista[idx].unidades)-e}))}/></td>
                 </tr></tfoot>
             </table>
             

@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useOutletContext } from 'react-router-dom';
 
 const Agregar = () => {
-  const {setActivador} = useOutletContext();
+  const {setActivador,activador} = useOutletContext();
   const valorInicial={
     titulo:'',
     precioC:'',
@@ -26,7 +26,7 @@ const envio= async (values,actions)=>{
             title: 'GENIAL!!!',
             text: `Cuenta creada prefectamente`,
         });
-        setActivador(user._id)
+        setActivador(activador?0:1)
         actions.resetForm(valorInicial);
       }else{
         Swal.fire({

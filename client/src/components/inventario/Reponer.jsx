@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 
 const Reponer = ({id,unidadesA}) => {
-  const {setActivador} = useOutletContext();
+  const {setActivador,activador} = useOutletContext();
   const envio = async ()=>{
     try {
       const { value: unidades } = await Swal.fire({
@@ -22,9 +22,8 @@ const Reponer = ({id,unidadesA}) => {
       
       if (Number(unidades)) {
         const actulizacion =  await axios.put(`${process.env.REACT_APP_API_URL}/api/reponer/${id}`,{'unidades':(Number(unidades)+unidadesA)})
-        setActivador([id])
         console.log(actulizacion)
-        console.log(unidades)
+        setActivador(activador?0:1)
   
         Swal.fire(`Correcto: ${unidades}`)
       }
