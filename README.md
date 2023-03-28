@@ -6,6 +6,7 @@ Este proyecto tiene como objetivo crear un registro completo de todos los produc
 
 ## Caracteristicas
 
-- Carga de productos
+- Carga de productos:
+
   Para la carga de productos, necesitarás ingresar los siguientes datos: nombre del producto, precio de compra, precio de venta, unidades disponibles y stock crítico. Es importante que ingreses estos datos con precisión para asegurar que tu registro de productos sea completo y confiable. 
 
