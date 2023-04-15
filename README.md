@@ -9,6 +9,10 @@ Este proyecto tiene como objetivo crear un registro completo de todos los produc
 - Estadisticas:
 
   En esta sección, tendrás acceso a las estadísticas más relevantes para tu negocio, como el producto más vendido, las ventas por mes y las ventas por día. Estos datos te permitirán obtener una visión clara y detallada del desempeño de tu negocio, identificar patrones y tendencias en el comportamiento de tus clientes y tomar decisiones informadas para mejorar tus estrategias de venta y marketing.
+
+  [Pantalla estadistica](/screen/InventarioM.png)
+
+   [Pantalla estadistica](/screen/InventarioD.png)
   
 - Carga de productos:
 
